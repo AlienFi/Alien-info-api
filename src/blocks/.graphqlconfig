@@ -1,0 +1,15 @@
+{
+  "name": "BSC Blocks",
+  "schemaPath": "schema.graphql",
+  "extensions": {
+    "endpoints": {
+      "BSC Blocks": {
+        "url": "https://api.thegraph.com/subgraphs/name/ianlapham/arbitrum-one-blocks",
+        "headers": {
+          "user-agent": "JS GraphQL"
+        },
+        "introspect": false
+      }
+    }
+  }
+}

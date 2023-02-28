@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "builds": [{ "src": "src/**/*.ts", "use": "@now/node" }],
+  "routes": [
+    { "src": "/api/v2/totalliquidity", "dest": "/src/totalliquidity.ts", "methods": ["GET"] },
+    { "src": "/api/v2/stats", "dest": "/src/totalliquidity.ts", "methods": ["GET"] },
+    { "src": "/api/v2/summary", "dest": "/src/summary.ts", "methods": ["GET"] },
+    { "src": "/api/v2/assets", "dest": "/src/assets.ts", "methods": ["GET"] },
+    { "src": "/api/v2/tickers", "dest": "/src/tickers.ts", "methods": ["GET"] },
+    {
+      "src": "/api/v2/orderbook/(?<pair>.*)",
+      "dest": "/src/orderbook.ts?pair=$pair",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/api/v2/trades/(?<pair>.*)",
+      "dest": "/src/trades.ts?pair=$pair",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/api/v2/assets/(?<address>.*)",
+      "dest": "/src/tokens.ts?address=$address",
+      "methods": ["GET"]
+    },
+    {"src": "/.*", "dest": "/src/404.ts"}
+  ]
+  
+}

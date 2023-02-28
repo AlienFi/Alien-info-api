@@ -1,0 +1,15 @@
+{
+  "name": "BSCswap",
+  "schemaPath": "schema.graphql",
+  "extensions": {
+    "endpoints": {
+      "BSCswap": {
+        "url": "https://api.thegraph.com/subgraphs/name/alienfi/alien-exchange1",
+        "headers": {
+          "user-agent": "JS GraphQL"
+        },
+        "introspect": false
+      }
+    }
+  }
+}
